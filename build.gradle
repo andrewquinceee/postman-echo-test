@@ -6,7 +6,8 @@ group 'ru.netology'
 version '1.0-SNAPSHOT'
 
 java {
-    sourceCompatibility = 11
+    sourceCompatibility = 17
+    targetCompatibility = 17
 }
 
 repositories {
@@ -16,6 +17,7 @@ repositories {
 dependencies {
     testImplementation 'io.rest-assured:rest-assured:5.5.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 test {
