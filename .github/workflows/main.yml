@@ -19,6 +19,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     
-      - name: Run tests
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+    
+    - name: Run tests
       run: |
         gradle test
