@@ -8,16 +8,13 @@ import static org.hamcrest.Matchers.equalTo;
 class PostmanEchoTest {
     @Test
     void shouldReturnSentData() {
-        // Given - When - Then
         given()
                 .baseUri("https://postman-echo.com")
-                .body("some data") // отправляемые данные
-                // Выполняемые действия
-                .when()
+                .body("some data")
+        .when()
                 .post("/post")
-                // Проверки
-                .then()
+        .then()
                 .statusCode(200)
-                .body("data", equalTo("some data")); // <-- ВОТ ЭТО МЫ ДОБАВИЛИ
+                .body("data", equalTo("some data"));
     }
 }
